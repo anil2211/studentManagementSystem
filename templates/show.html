@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>student Records</title>  
+     {% load staticfiles %}  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<table class="table table-striped table-bordered table-sm">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th> ID</th>  
+        <th> Name</th>
+        <th>last Name</th>  
+        <th> street</th>  
+        <th> City</th>  
+        <th>district</th>
+        <th> state</th>  
+        <th> pin</th>
+        <th>class</th>  
+        <th>section</th>  
+        <th>dob</th>  
+        <th>gender</th>
+        <th>father name</th>  
+        <th>mothr name</th>
+        <th>father occupation</th>  
+        <th> contact</th>  
+        <th> email</th>  
+         
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for student in students %}  
+    <tr>  
+        <td>{{student.s_id }}</td>  
+        <td>{{student.s_name }}</td>  
+        <td>{{student.s_lastname  }}</td>  
+        <td>{{student.s_street  }}</td>
+        <td>{{student.s_city  }}</td>  
+        <td>{{student.s_district }}</td>  
+        <td>{{student.s_state  }}</td>  
+        <td>{{student.s_pin  }}</td>
+        <td>{{student.s_class  }}</td>  
+        <td>{{student.s_section }}</td>  
+        <td>{{student.s_dob  }}</td>  
+        <td>{{student.s_gender  }}</td>
+        <td>{{student.s_father_name  }}</td>  
+        <td>{{student.s_mother_name }}</td>  
+        <td>{{student.s_fathers_occupation  }}</td>  
+        <td>{{student.s_fmobile_number  }}</td>
+        <td>{{student.s_fmobile_email  }}</td>  
+        <td>  
+            <a href="/edit/{{ student.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/delete/{{ student.id }}">Delete</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><a href="/stu" class="btn btn-primary">Add New Record</a></center>  
+</body>  
+</html>

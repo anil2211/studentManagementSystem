@@ -1,0 +1,200 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>SMS</title>
+</head>
+
+<body>
+    <!-- navigattion -->
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home">Student Management System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- nav-end -->
+
+
+    <!-- services section start -->
+    <section id="services">
+        <div class="container mb-5 ">
+            <h1 class="text-center text-capitalize pt-4">student details</h1>
+            <hr class="mx-auto w-25 pt-4 ">
+            
+            <!-- <div class="row text-center">
+                <div class="col-lg-3 col-md-3 col-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/add.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Add Student</h5>
+                    
+                            <a href="#" class="btn btn-primary">click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/update.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Update Student</h5>
+                            
+                            <a href="#" class="btn btn-primary">click here</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-12">
+                    <div class="card" style="width: 21rem;">
+                        <img class="card-img-top mt-5" src="images/view.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">view Student</h5>
+                        
+                            <a href="#" class="btn btn-primary">click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="images/delete.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete Student</h5>
+                            <a href="#" class="btn btn-primary">click here</a>
+                        </div>
+                    </div>
+                </div>
+                 -->
+
+                 <div class="container">
+                    <div class="row">
+                        <form method="POST" action="/addstudent">
+                            {% csrf_token %}
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <img src="{% static '/images/add.jpg' %}".jpg" class="bd-placeholder-img rounded-circle" width="140" height="140"/>
+                            <h3>Add student</h3>
+                            <p>To add new detail of any student</p>
+                            <!-- <a class="btn btn-outline-primary" href="#" role="button">click here »</a> -->
+                            <button type="submit" class="btn btn-outline-primary">click here</button>
+                        </div>
+                    </form>
+                    
+
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <img src="{% static '/images/view.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                                />       
+                            <h3>View student</h3>
+                            <p>To view all student</p>
+                            <a class="btn btn-outline-primary" href="#" role="button">click here »</a></p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <img src="{% static '/images/update.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                                />       
+                            <h3>Update student</h3>
+                            <p>To update the details of student</p>
+                            <a class="btn btn-outline-primary" href="#" role="button">click here »</a></p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <img src="{% static '/images/delete.jpg' %}" class="bd-placeholder-img rounded-circle" width="140" height="140"
+                                />       
+                            <h3>Delete student</h3>
+                            <p>Delete student records</p>
+                            <a class="btn btn-outline-primary" href="#" role="button">click here »</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    </section>
+    <!-- service section end -->
+
+    
+<!-- contact us start -->
+<section id="contact">
+    <div class="container mb-5  ">
+        <h1 class="text-center text-capitalize pt-4">Contact us</h1>
+        <hr class="mx-auto w-25 pt-4 ">
+        <div class="w-50 mx-auto">
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <label for="email">Enter your Name:</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Mobile Number:</label>
+                    <input type="number" class="form-control" id="mobile">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Message</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+<!-- contact us end -->
+
+ <!-- footer start -->
+ <footer class="container">
+    <hr>
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2017-2019 studentmanagementsystem@gmail.com <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    <hr>  
+</footer>
+<!-- footer end -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
